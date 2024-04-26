@@ -4,7 +4,7 @@ services:
     volumes:
       - ./grafana.ini:/etc/grafana/grafana.ini
     ports:
-      - "3000:5000"
+      - "3000:3000"
 
   nginx:
     image: nginx:latest
@@ -13,7 +13,7 @@ services:
       - ./grafana.ini:/etc/grafana/grafana.ini
       - ./htpasswd:/tmp/htpasswd
     ports:
-      - "80:5000"
+      - "90:90"
     depends_on:
       - grafana
 
