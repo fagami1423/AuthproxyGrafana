@@ -10,9 +10,20 @@ This project aims to overcome this limitation by implementing a proxy authentica
 Automatic login to Grafana via proxy authentication
 Improved user experience by eliminating the need for manual logins
 
+### Grafana configuration
+* grafana.ini
+```
+[users]
+allow_sign_up = false
+auto_assign_org = true
+auto_assign_org_role = Editor
 
-### How it Works
-The project works by setting up a proxy server that stands between the users and the Grafana server. When a user makes a request to access Grafana, the request goes to the proxy server first. The proxy server authenticates the user and then forwards the user's information to Grafana in the form of special headers. Grafana is configured to trust this information and automatically logs the user in.
+[auth.proxy]
+enabled = true
+header_name = X-WEBAUTH-USER
+header_property = username
+auto_sign_up = true
+```
 
 ### Run the project
 
