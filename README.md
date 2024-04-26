@@ -36,4 +36,6 @@ docker compose up -d
 * but for the auto login use, the username and password are in htpasswd file.
 * `http://username:password@localhost:3000`
 
+This works but it is vunerable in security. Though users won't be able see on the browser, it is still unsafe with this method.
+
 you can use your own port 
