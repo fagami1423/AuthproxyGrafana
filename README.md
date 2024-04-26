@@ -30,3 +30,10 @@ auto_sign_up = true
 ```
 docker compose up -d 
 ```
+it runs in 
+`http://localhost:3000`
+
+but for the auto login use, the username and password are in htpasswd file. 
+`http://username:password@localhost:3000`
+
+you can use your own port 
